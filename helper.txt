@@ -1,0 +1,12 @@
+1)
+//Delete dangling(with Terminating status) namespace
+//In this example argocd namespace
+kubectl get namespace "argocd" -o json \
+  | tr -d "\n" | sed "s/\"finalizers\": \[[^]]\+\]/\"finalizers\": []/" \
+  | kubectl replace --raw /api/v1/namespaces/argocd/finalize -f -
+
+2)
+//For resolve error<Unable to connect to the server: http2: client connection lost>
+//when call for example <kubectl get ns> command
+unset http_proxy
+unset https_proxy
