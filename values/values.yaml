@@ -1,0 +1,25 @@
+configs:
+  cm:
+    url: https://192.168.61.120
+
+    #admin.enabled: false
+
+    dex.config: |
+      connectors:
+        - type: github
+          id: github
+          name: GitHub
+          config:
+            clientID: $oauth-app-cred:client_id
+            clientSecret: $oauth-app-cred:client_secret
+
+#Change <argocd-server> service type
+server:
+  service:
+    type: LoadBalancer
+
+applicationSet:
+  name: app-set-in-main
+  replicas: 1
+  image:
+    repository: "https://github.com/tereza-arta/argo-apps.git"
