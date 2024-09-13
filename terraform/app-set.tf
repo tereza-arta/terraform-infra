@@ -24,14 +24,11 @@ spec:
         path: '{{path}}'
       destination:
         server: https://kubernetes.default.svc
-        namespace: '{{path.basename}}-ns'
       syncPolicy:
         automated:
           prune: true
           selfHeal: true
           allowEmpty: false
-        syncOptions:
-          - CreateNamespace=true
 
 YAML
 
