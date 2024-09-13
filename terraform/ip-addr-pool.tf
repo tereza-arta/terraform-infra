@@ -8,7 +8,7 @@ metadata:
   namespace: metallb-system
 spec:
   addresses:
-  - 192.168.49.220-192.168.49.230
+  - 192.168.39.220-192.168.39.230
 
 YAML
 
