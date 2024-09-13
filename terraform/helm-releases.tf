@@ -15,7 +15,7 @@ resource "helm_release" "argocd" {
   #create_namespace = var.create_ns
   version          = var.chart_version
 
-  values = ["${file("values.yaml")}"]
+  values = ["${file("../values/values.yaml")}"]
 
   depends_on = [
     kubectl_manifest.namespace_argo
