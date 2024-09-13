@@ -1,8 +1,8 @@
 resource "helm_release" "metallb" {
-  name       = "metallb"
-  repository = "https://metallb.github.io/metallb"
-  chart      = "metallb"
-  namespace  = "metallb-system"
+  name       = var.mlb_release_name
+  repository = var.mlb_repository
+  chart      = var.mlb_chart
+  namespace  = var.mlb_namespace
 
   depends_on = [kubectl_manifest.namespace_mlb]
 }
