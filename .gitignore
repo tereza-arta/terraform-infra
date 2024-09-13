@@ -1,7 +1,11 @@
-terraform/.terraform/providers/registry.terraform.io
+#Problem
+terraform/.terraf*
+terraform/terraf*
 
-terraform/.terraform.lock.hcl
-
-terraform/terraform.tfstate
-
-terraform/terraform.tfstate.backup
+#terraform/.terraform/providers/registry.terraform.io
+#
+#terraform/.terraform.lock.hcl
+#
+#terraform/terraform.tfstate
+#
+#terraform/terraform.tfstate.backup
