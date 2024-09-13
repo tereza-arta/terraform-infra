@@ -1,2 +1,7 @@
-terraform/terraf*
-terraform/.terraf*
+terraform/.terraform/providers/registry.terraform.io
+
+terraform/.terraform.lock.hcl
+
+terraform/terraform.tfstate
+
+terraform/terraform.tfstate.backup
