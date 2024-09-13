@@ -53,6 +53,6 @@ variable "mlb_chart" {
 
 variable "mlb_namespace" {
   type        = string
-  default     = "metallb_system"
+  default     = "metallb-system"
   description = "Namespace for metallb resources"
 }
